@@ -17,9 +17,9 @@
 # include <stdio.h>
 # include <unistd.h>
 
-typedef struct t_node
+typedef struct t_list
 {
 	long	content;
-	s_node	*next;
-}			s_node;
+	s_list	*next;
+}			s_list;
 #endif

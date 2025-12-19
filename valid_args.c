@@ -23,7 +23,7 @@ int	not_number(char *str[])
 	{
 		while (str[i][j])
 		{
-			if (str[i][j] == '-')
+			if (str[i][j] == '-' || str[i][j] == '+')
 				j++;
 			if (str[i][j] < '0' || str[i][j] > '9')
 				return (1);
@@ -41,7 +41,7 @@ int	invalid_int(long x)
 		return (1);
 	return (0);
 }
-int	issorted(s_node *node)
+int	issorted(s_list *node)
 {
 	while (node->next)
 	{
@@ -51,9 +51,9 @@ int	issorted(s_node *node)
 	}
 	return (1);
 }
-int	repeatednumber(s_node *node)
+int	repeatednumber(s_list *node)
 {
-	s_node *tmp;
+	s_list *tmp;
 
 	while (node->next)
 	{

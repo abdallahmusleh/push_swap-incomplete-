@@ -6,7 +6,7 @@
 /*   By: abmusleh <abmusleh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 20:03:33 by abmusleh          #+#    #+#             */
-/*   Updated: 2025/12/17 23:11:11 by abmusleh         ###   ########.fr       */
+/*   Updated: 2025/12/20 22:36:00 by abmusleh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,13 @@ int	not_number(char *str[])
 	j = 0;
 	while (str[i])
 	{
+		j = 0;
+		if (j == 0 && (str[i][j] == '-' || str[i][j] == '+'))
+			j++;
+		if (!str[i][j])
+			return (1);
 		while (str[i][j])
 		{
-			if (str[i][j] == '-' || str[i][j] == '+')
-				j++;
 			if (str[i][j] < '0' || str[i][j] > '9')
 				return (1);
 			j++;
@@ -35,6 +38,8 @@ int	not_number(char *str[])
 }
 int	invalid_int(long x)
 {
+	long x;
+	
 	if (x > INT_MAX)
 		return (1);
 	if (x < INT_MIN)
@@ -43,6 +48,8 @@ int	invalid_int(long x)
 }
 int	issorted(s_list *node)
 {
+	if (!node)
+		return (1);
 	while (node->next)
 	{
 		if ((node->content) > (node->next->content))
@@ -51,20 +58,20 @@ int	issorted(s_list *node)
 	}
 	return (1);
 }
-int	repeatednumber(s_list *node)
+int	repeatednumber(s_list *list)
 {
 	s_list *tmp;
 
-	while (node->next)
+	while (list)
 	{
-		tmp = node->next;
-		while (tmp->next)
+		tmp = list->next;
+		while (tmp)
 		{
-			if (node->content == tmp->content)
+			if (list->content == tmp->content)
 				return (1);
 			tmp = tmp->next;
 		}
-		node = node->next;
+		list = list->next;
 	}
 	return (0);
 }

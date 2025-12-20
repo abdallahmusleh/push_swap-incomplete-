@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   atolong.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abmusleh <abmusleh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 20:17:04 by abmusleh          #+#    #+#             */
-/*   Updated: 2025/12/17 20:18:22 by abmusleh         ###   ########.fr       */
+/*   Updated: 2025/12/20 22:35:42 by abmusleh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atolong(const char *nptr)
 {
-	int		i;
-	int		sign;
-	int		x;
-	char	*c;
+	long i;
+	int sign;
+	long x;
+	char *c;
 
 	i = 0;
 	sign = 1;

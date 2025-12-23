@@ -6,7 +6,7 @@
 /*   By: abmusleh <abmusleh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 20:03:33 by abmusleh          #+#    #+#             */
-/*   Updated: 2025/12/21 18:43:25 by abmusleh         ###   ########.fr       */
+/*   Updated: 2025/12/23 22:52:03 by abmusleh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	not_number(char *str[])
 	return (0);
 }
 int	invalid_int(long x)
-{	
+{
 	if (x > INT_MAX)
 		return (1);
 	if (x < INT_MIN)

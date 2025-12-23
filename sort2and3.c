@@ -43,8 +43,3 @@ void	sort3(s_list **list, s_list **list2)
 		&& (*list)->next->content < (*list)->next->next->content)
 		ra(list);
 }
-void	sort4(s_list **stack_a, s_list **stack_b)
-{
-	int smallest_value;
-	smallest_value = (*stack_a) -
-}

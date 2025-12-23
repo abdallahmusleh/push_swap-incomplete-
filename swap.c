@@ -21,7 +21,7 @@ static void	swap(s_list **stack)
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	int tmp;
-    tmp = (*stack) -> content;
+	tmp = (*stack)->content;
 	(*stack)->content = (*stack)->next->content;
 	(*stack)->next->content = tmp;
 }
